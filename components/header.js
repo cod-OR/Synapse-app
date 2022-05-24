@@ -7,7 +7,7 @@ const Header = () => {
    
       <Image 
         style={styles.logo}
-        source={require('../assets/favicon.png')}
+        source={require('../assets/sevarologo.png')}
         ></Image>
     </View>
   )
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
       right: "84.11%",
       top: "2.72%",
       bottom: "93.4%",
-      
+      height:40,
+      width:40
     }
 });

@@ -1,36 +1,49 @@
-import { View, Text , StyleSheet} from 'react-native'
+import { View, Text , StyleSheet,ScrollView} from 'react-native'
 import React from 'react'
 import InfoBox from "../components/infobox"
+import { useFonts } from 'expo-font';
 
 const Home = () => {
-  return (
-    <View style={StyleSheet.home}>
-      <Text style={styles.greet}>Welcome back, Dr. Martinez</Text>
-      <InfoBox />
-      <InfoBox />
-      <InfoBox />
-      <InfoBox />
-    </View>
-  )
+
+    const [loaded] = useFonts({
+        Prompt: require("../assets/fonts/Prompt-Medium.ttf"),
+      });
+      
+      if (!loaded) {
+        return null;
+      }
+
+    return (
+        <ScrollView >
+            <View style={styles.list}>
+                <Text style={styles.greet}>Welcome back, Dr. Martinez</Text>
+                <InfoBox />
+                <InfoBox />
+                <InfoBox />
+                <InfoBox />
+                <InfoBox />
+                <InfoBox />
+                <InfoBox />
+                <InfoBox />
+            </View>
+        </ScrollView>
+    )
 }
 
 export default Home
 
 
 const styles = StyleSheet.create({
-    home: {
-        alignItems: 'center',
-        marginTop: "10%",
-        flex:1
+    list: {
+        border: 2,
+        borderColor:"#000",
+        padding:"5%",
     },
     greet:{
         fontFamily: 'Prompt',
         fontStyle: "normal",
-        fontWeight: "500",
         fontSize: 24,
         lineHeight: 50,
-
-        /* or 36px */
         display: "flex",
         alignItems: "center",
     }
