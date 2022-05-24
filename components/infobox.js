@@ -30,7 +30,6 @@ const InfoBox = () => {
                     style={styles.button}
                 > 
                 <Text style={styles.btntext}>Stroke Alert</Text>
-
                 </TouchableOpacity>
                 <Text style={[styles.secinfotext,styles.time]} >5 min ago</Text>
             </View>

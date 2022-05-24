@@ -10,8 +10,7 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar hidden />
       <Header />
-      <Home />
-      {/* <Call></Call> */}
+      <Call />
     </View>
   );
 }
