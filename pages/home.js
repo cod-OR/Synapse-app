@@ -2,6 +2,7 @@ import { View, Text , StyleSheet,ScrollView} from 'react-native'
 import React from 'react'
 import InfoBox from "../components/infobox"
 import { useFonts } from 'expo-font';
+import addTestIdentifiers from '../utils/addTestIdentifiers';
 
 const Home = () => {
 

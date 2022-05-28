@@ -1,6 +1,8 @@
 import { View, Text,StyleSheet, SafeAreaView, TextInput, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useFonts } from 'expo-font';
+import addTestIdentifiers from '../utils/addTestIdentifiers';
+
 
 const EditForm = () => {
     const [i1, onChangei1] = React.useState();
@@ -27,6 +29,7 @@ const EditForm = () => {
           style={styles.input}
           onChangeText={onChangei1}
           value={i1}
+          {...addTestIdentifiers('text_input_first')} 
         />
       </View>
       <View style={styles.ipbox}>
@@ -93,7 +96,6 @@ const styles = StyleSheet.create({
         alignItems:"flex-end",
         paddingVertical:20,
         
-
     },
     button:{
         height:44,

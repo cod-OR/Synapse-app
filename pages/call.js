@@ -84,7 +84,7 @@ const Call = () => {
 
     const [loaded] = useFonts({
         Prompt: require("../assets/fonts/Prompt-Medium.ttf"),
-        Nunito: require("../assets/fonts/Nunito-SemiBold.ttf")
+        Nunito: require("../assets/fonts/Nunito-VariableFont_wght.ttf")
     });
       
     if (!loaded) {

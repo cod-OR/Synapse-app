@@ -2,6 +2,7 @@ import { View, Text, ScrollView , StyleSheet, Image} from 'react-native'
 import React from 'react'
 import { useFonts } from 'expo-font';
 import EditForm from "../components/editform";
+import addTestIdentifiers from '../utils/addTestIdentifiers';
 
 const Edit = () => {
 
@@ -14,11 +15,11 @@ const Edit = () => {
     if (!loaded) {
     return null;
     }
-
+    // 
 
   return (
+      
       <ScrollView>
-        <View style={styles.container} >
                 {/* <Text>kjbkjsbcjkb</Text> */}
                 <View style={[styles.card , styles.shadowProp]}>
 
@@ -47,9 +48,8 @@ const Edit = () => {
 
                 </View>
             
-        </View>
-        </ScrollView>
-    
+                </ScrollView>
+  
   )
 }
 
