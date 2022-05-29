@@ -14,13 +14,17 @@ const Login = () => {
         return null;
     }
 
-    const image = { uri: "https://reactjs.org/logo-og.png" };
+    const image = require('../assets/Rectangle_1404.png');
 
   return (
+    <View style={styles.screen}>
     <ImageBackground 
+        source={image} 
+        style={styles.image}
     >
-    <View style={styles.container}>
         
+    <View style={styles.container}>
+    
             <View style={styles.logincompo}>
                 <View style={styles.heading}><Text style={styles.headingText}>SIGN IN</Text></View>
                 <View style={styles.form}>
@@ -38,9 +42,10 @@ const Login = () => {
                     <Text style={styles.buttontext}>Sign In</Text>
                 </TouchableOpacity>
             </View>
-      
+            
     </View>
     </ImageBackground>
+    </View>
   )
 }
 
@@ -51,13 +56,12 @@ export default Login;
 const styles = StyleSheet.create({
     container: {
       margin:0,
-      justifyContent:"center",
-      alignItems:"center",
       width:"100%",
-      height:"100%"
+      height:"100%",
+        
     },
     logincompo:{
-        padding:"10%",
+        padding:"20%",
         flex:1,
         marginTop:"10%"
     },
@@ -75,7 +79,8 @@ const styles = StyleSheet.create({
     },
     heading:{
         justifyContent:"center",
-        alignItems:"center"
+        alignItems:"center",
+        
     },
     button:{
         height:44,
@@ -83,7 +88,6 @@ const styles = StyleSheet.create({
         borderRadius:10,
         backgroundColor:"#35BDB2",
         justifyContent:"center",
-        // alignItems:"center"
     },
     buttontext:{
         fontFamily: "Inter",
@@ -97,6 +101,12 @@ const styles = StyleSheet.create({
     form:{
         width:250,
         paddingVertical:"15%",
+        
+    },
+    screen:{
+        alignItems:"center",
+        justifyContent:"center",
+        
     },
     label:{
         //styleName: Headings/Label Heading;
@@ -115,5 +125,9 @@ const styles = StyleSheet.create({
         lineHeight: 36,
         letterSpacing: 0,
         textAlign: "left"
+    },
+    image:{
+        width:"100%",
+        height:"100%",
     }
   });
