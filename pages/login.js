@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity , StyleSheet } from 'react-native'
+import { View, ImageBackground, Text, TextInput, TouchableOpacity , StyleSheet } from 'react-native'
 import React from 'react';
 import { useFonts } from 'expo-font';
 
@@ -14,27 +14,33 @@ const Login = () => {
         return null;
     }
 
+    const image = { uri: "https://reactjs.org/logo-og.png" };
 
   return (
+    <ImageBackground 
+    >
     <View style={styles.container}>
-      <View style={styles.logincompo}>
-        <View style={styles.heading}><Text style={styles.headingText}>SIGN IN</Text></View>
-        <View style={styles.form}>
+        
+            <View style={styles.logincompo}>
+                <View style={styles.heading}><Text style={styles.headingText}>SIGN IN</Text></View>
+                <View style={styles.form}>
 
-                <View style={styles.item}>
-                    <Text style={styles.label}>YOUR NAME</Text>
-                    <TextInput style={styles.input}/>
+                        <View style={styles.item}>
+                            <Text style={styles.label}>YOUR NAME</Text>
+                            <TextInput style={styles.input}/>
+                        </View>
+                        <View>
+                            <Text style={styles.label}>YOUR PASSWORD</Text>
+                            <TextInput style={styles.input} />
+                        </View>
                 </View>
-                <View>
-                    <Text style={styles.label}>YOUR PASSWORD</Text>
-                    <TextInput style={styles.input} />
-                </View>
-        </View>
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttontext}>Sign In</Text>
-        </TouchableOpacity>
-      </View>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttontext}>Sign In</Text>
+                </TouchableOpacity>
+            </View>
+      
     </View>
+    </ImageBackground>
   )
 }
 
@@ -44,11 +50,11 @@ export default Login;
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#',
       margin:0,
       justifyContent:"center",
       alignItems:"center",
+      width:"100%",
+      height:"100%"
     },
     logincompo:{
         padding:"10%",
@@ -62,7 +68,7 @@ const styles = StyleSheet.create({
         height: 40,
         borderWidth: 1,
         borderRadius:5,
-        borderColor: "grey",
+        borderColor: "black",
         marginTop:20,
         padding:5,
         
@@ -96,7 +102,7 @@ const styles = StyleSheet.create({
         //styleName: Headings/Label Heading;
         fontFamily: "Nunito",
         fontSize: 12,
-        fontWeight: "bold",
+        fontWeight: "600",
         lineHeight: 18,
         letterSpacing: 0,
         textAlign: "left",
