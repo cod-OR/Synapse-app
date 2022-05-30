@@ -13,10 +13,10 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar hidden />
       <Header />
-      <Login />
+      {/* <Login /> */}
       {/* <Home /> */}
       {/* <Edit /> */}
-      {/* <Call /> */}
+      <Call />
       {/* <Options /> */}
     </View>
   );
