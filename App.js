@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from "./components/header"
+import Sandbox from "./components/sandbox"
+
 import Home from "./pages/home"
 import Call from "./pages/call"
 import Edit from "./pages/edit"
@@ -18,6 +20,7 @@ export default function App() {
       {/* <Edit /> */}
       <Call />
       {/* <Options /> */}
+      {/* <Sandbox /> */}
     </View>
   );
 }

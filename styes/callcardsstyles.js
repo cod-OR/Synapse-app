@@ -166,7 +166,54 @@ const styles = StyleSheet.create({
         letterSpacing: 0,
         textAlign: "left",
         color:"#FFFFFF"
+    },
+    searchcompo:{
+        borderWidth:1,
+        borderColor:"grey",
+        height:200
+    },
+    searchbar:{
+        width:"100%",  
+
+    },
+    searchresultcompo:{
+        flexDirection:"row",
+        justifyContent:"space-around",
+        width:"100%",
+        borderTopWidth:1,
+        borderColor:"grey",
+        height:40,
+        alignItems:"center",
+    },
+    patientMRNbox:{
+        height:21,
+        borderRadius:4,
+        justifyContent:"center",
+        alignItems:"center",
+        paddingHorizontal:7,
+        backgroundColor:"#60529C"
+    },
+    patientname:{
+        fontFamily: "Nunito",
+        fontSize: 16,
+        fontWeight: "500",
+        lineHeight:21.82
+    },
+    mrn_text:{
+        fontFamily: "Nunito",
+        fontSize: 11,
+        fontWeight: "500",
+        lineHeight:15,
+        color:"#FFFF"
+        
+    },
+    search_patient_box:{
+        borderBottomWidth:1, 
+        minHeight:200, 
+        flex:1,
+        borderColor:"grey"
     }
+
 
 
 

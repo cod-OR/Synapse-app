@@ -6,7 +6,7 @@ import styles from "../styes/callcardsstyles"
 import { useState } from 'react'
 import ExistingPatientSearch from "./existingPatientSearch"
 import NonClinicalCall from "./nonClinicalCall"
-
+import NewPatient from "./newPatient"
 
 export const CardHeaderOptions = () =>{
     return(
@@ -22,9 +22,7 @@ export const CardHeaderOptions = () =>{
 
 const Popup =({option}) => {
 
-    const [isEnabled, setIsEnabled] = useState(false);
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
+    
     if(option==0){
         return(
             <Text></Text>
@@ -34,16 +32,8 @@ const Popup =({option}) => {
     if(option==1){
         
         return(
-            <View style={styles.isitstrokebox}>
-                <Text style={styles.blacktext}>Is this a stroke alert?</Text>
-                <Switch
-                    trackColor={{ false: "#767577", true: "#81b0ff" }}
-                    thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-                    ios_backgroundColor="#3e3e3e"
-                    onValueChange={toggleSwitch}
-                    value={isEnabled}
-                ></Switch>
-
+            <View>
+                <NewPatient />
             </View>
         )
     }
@@ -51,7 +41,7 @@ const Popup =({option}) => {
 
     if(option==2){
         return(
-            <View>
+            <View style={styles.search_patient_box}>
             <ExistingPatientSearch /> 
             </View>
         )

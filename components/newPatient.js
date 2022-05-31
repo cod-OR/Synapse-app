@@ -1,10 +1,13 @@
 
 
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, Switch } from 'react-native'
+import React, {useState} from 'react'
 import styles from "../styes/callcardsstyles"
 
 export default function NewPatient() {
+  const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
   return (
     <View style={styles.isitstrokebox}>
                 <Text style={styles.blacktext}>Is this a stroke alert?</Text>

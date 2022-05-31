@@ -21,7 +21,7 @@ const Call = () => {
 
     return (
       
-    <ScrollView>
+    <ScrollView nestedScrollEnabled = {true} >
     <View style={{...styles.container, paddingTop:"15%"}}>
         <View style={[styles.card, styles.shadowProp]}>
             <View style={styles.box}>
