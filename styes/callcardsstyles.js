@@ -28,9 +28,8 @@ const styles = StyleSheet.create({
         width:"100%",
         borderTopWidth:1,
         borderBottomWidth:1,
-        borderColor:"grey",
+        borderColor:"#d9d9d9",
         marginVertical:10,
-        
         paddingVertical:"5%",
         paddingHorizontal:0
     },
@@ -70,6 +69,9 @@ const styles = StyleSheet.create({
         padding:"5%",
         flex:1,
         justifyContent:"center",
+        marginBottom:80,
+        // borderWidth:2,
+        // paddingBottom:20
     },
     shadowProp: {
       shadowColor: '#171717',
@@ -207,7 +209,6 @@ const styles = StyleSheet.create({
         
     },
     search_patient_box:{
-        borderBottomWidth:1, 
         minHeight:200, 
         flex:1,
         borderColor:"#e6e6e6"
@@ -225,7 +226,8 @@ const styles = StyleSheet.create({
     },
     patientInfo:{
         backgroundColor:"#c2bcdc",
-        
+        // borderWidth:2,
+        borderRadius:7
     },
     doctor_info_text_big:{
         // padding:5,

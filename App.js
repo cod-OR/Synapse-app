@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View , KeyboardAvoidingView} from 'react-native';
 import Header from "./components/header"
 import Sandbox from "./components/sandbox"
 
@@ -24,12 +24,14 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar hidden />
+      <KeyboardAvoidingView behavior="padding">
       <Header />
       {/* <Login /> */}
       {/* <Home /> */}
       {/* <Edit /> */}
       <Call />
       {/* <Sandbox /> */}
+      </KeyboardAvoidingView>
     </View>
   );
 }

@@ -32,7 +32,7 @@ const Call = () => {
     const [receive, setReceive] = useState(false);
     return (
         <ScrollView nestedScrollEnabled = {true} >
-        <View style={{...styles.container, paddingTop:"15%"}}>
+        <View style={{...styles.container, paddingTop:"5%"}}>
             <View style={[styles.card, styles.shadowProp]}>
                 
                     
