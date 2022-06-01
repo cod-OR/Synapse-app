@@ -5,7 +5,7 @@ import React, {useEffect, useState} from 'react'
 import SearchBar from "react-native-dynamic-search-bar";
 import styles from '../styes/callcardsstyles';
 import patients from "../assets/data/patientsdata"
-
+import { EvilIcons } from '@expo/vector-icons';
 import Options from "./options.js"
 
 
@@ -36,7 +36,7 @@ const SearchResultCompo =  ({patient, expanded, setExpanded}) => {
         </View>
         <View>
           <Text style={styles.doctor_info_text_small}>Emergent</Text>
-          <Text style={styles.doctor_info_text_small}>tick</Text>
+          <EvilIcons name="check" size={20} color="#60529C" />
         </View>
       </View>
 
@@ -69,7 +69,7 @@ export default function ExistingPatientSearch() {
           style={styles.searchbar}
         />
     
-      <ScrollView style={{height:150}}>
+      <ScrollView style={{height:150, borderBottomWidth:1, borderColor:"#e6e6e6"}}>
 
         <SearchResultCompo patient = {patients[0]} expanded={expanded} setExpanded={setExpanded}/>
         <SearchResultCompo patient = {patients[1]} expanded={expanded} setExpanded={setExpanded}/>

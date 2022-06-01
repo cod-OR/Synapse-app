@@ -22,7 +22,6 @@ export const CardHeaderOptions = () =>{
 };
 
 const Popup =({option}) => {
-
     
     if(option==""){
         return(

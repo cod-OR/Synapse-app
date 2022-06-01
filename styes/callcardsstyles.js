@@ -213,8 +213,8 @@ const styles = StyleSheet.create({
         borderColor:"#e6e6e6"
     },
     doctorinfo:{
-        backgroundColor:"#d9d9d9",
-        borderColor:"#8579b9",
+        backgroundColor:"#f2f2f2",
+        borderColor:"#f2f2f2",
         borderRadius:5,
         flexDirection:"row",
         alignItems:"center",
@@ -234,6 +234,7 @@ const styles = StyleSheet.create({
         lineHeight: 26,
         letterSpacing: 0,
         textAlign: "left",
+        color:"#60529C",
     },
 
     doctor_info_text_small:{
@@ -241,6 +242,7 @@ const styles = StyleSheet.create({
         fontFamily: "Nunito",
         fontSize: 10,
         lineHeight: 26,
+        color:"#60529C",
     }
 
 
