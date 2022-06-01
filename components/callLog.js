@@ -1,17 +1,9 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { useFonts } from 'expo-font';
 
-const InfoBox = () => {
-    const [loaded] = useFonts({
-        Prompt: require("../assets/fonts/Prompt-Medium.ttf"),
-        Nunito: require("../assets/fonts/Nunito-SemiBold.ttf")
-      });
-      
-    if (!loaded) {
-    return null;
-    }
 
+const CallLog = ({log}) => {
+   
   return (
     <View style={styles.box}>
             <View style={[styles.info, styles.profilepic]} flex="1">
@@ -21,24 +13,23 @@ const InfoBox = () => {
                 </Image>
             </View>
             <View style={[styles.info, styles.namebox]} flex="3">
-                <Text style={styles.name} >Robert Smith</Text>
-                <Text style={[styles.secinfotext,styles.mrn] } >MRN: 12232323</Text>
+                <Text style={styles.name} >{log.patientName}</Text>
+                <Text style={[styles.secinfotext,styles.mrn] } >MRN: {log.mrn}</Text>
             </View>
             <View style={[styles.info, styles.btnbox]} flex="2">
-                
-                <TouchableOpacity
+                <View
                     style={styles.button}
                 > 
-                <Text style={styles.btntext}>Stroke Alert</Text>
-                </TouchableOpacity>
-                <Text style={[styles.secinfotext,styles.time]} >5 min ago</Text>
+                <Text style={[styles.btntext]}>{log.info}</Text>
+                </View>
+                <Text style={[styles.secinfotext,styles.time]} >{log.time} min ago</Text>
             </View>
         
     </View>
   )
 }
 
-export default InfoBox;
+export default CallLog;
 
 
 const styles = StyleSheet.create({
@@ -75,10 +66,13 @@ const styles = StyleSheet.create({
         color: "#151522"
     },
     button: {
-        width:95,
-        height:35,
+        // width:95,
+        // height:35,
+        width:"100%",
+        height:"50%",
         borderRadius:10,
-        borderWidth:2,
+        borderWidth:1,
+        borderColor:"#d9d9d9",
         justifyContent: "center",
         alignItems: 'center',
     },
@@ -86,8 +80,8 @@ const styles = StyleSheet.create({
         alignItems:"flex-end",
         paddingRight:"2%",
         shadowColor: '#171717',
-        shadowOffset: {width: -2, height: 4},
-        shadowOpacity: 0.2,
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0,
         shadowRadius: 3,
     },
     btntext:{

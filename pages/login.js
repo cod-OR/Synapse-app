@@ -1,21 +1,12 @@
 import { View, ImageBackground, Text, TextInput, TouchableOpacity , StyleSheet } from 'react-native'
 import React from 'react';
-import { useFonts } from 'expo-font';
 
 
 const Login = () => {
 
-    const [loaded] = useFonts({
-        Nunito: require("../assets/fonts/Nunito-Bold.ttf"),
-        Inter: require("../assets/fonts/Inter-Bold.ttf")
-    });
-      
-    if (!loaded) {
-        return null;
-    }
-
+  
     const image = require('../assets/Rectangle_1404.png');
-
+   
   return (
     <View style={styles.screen}>
     <ImageBackground 

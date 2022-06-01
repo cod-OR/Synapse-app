@@ -1,31 +1,24 @@
 import { View, Text , StyleSheet,ScrollView} from 'react-native'
 import React from 'react'
-import InfoBox from "../components/infobox"
-import { useFonts } from 'expo-font';
+import CallLog from "../components/callLog"
 import addTestIdentifiers from '../utils/addTestIdentifiers';
+import logs from "../assets/data/logsdata"
 
 const Home = () => {
 
-    const [loaded] = useFonts({
-        Prompt: require("../assets/fonts/Prompt-Medium.ttf"),
-      });
-      
-      if (!loaded) {
-        return null;
-      }
+    const callLogs = [];
+
+    for(let i=0;i<logs.length;i++)
+        callLogs.push(<CallLog log={logs[i]} key={logs[i].key}/>);
+
 
     return (
         <ScrollView >
             <View style={styles.list}>
                 <Text style={styles.greet}>Welcome back, Dr. Martinez</Text>
-                <InfoBox />
-                <InfoBox />
-                <InfoBox />
-                <InfoBox />
-                <InfoBox />
-                <InfoBox />
-                <InfoBox />
-                <InfoBox />
+                <View>
+                    {callLogs}
+                </View>
             </View>
         </ScrollView>
     )

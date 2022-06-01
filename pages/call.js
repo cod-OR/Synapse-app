@@ -1,39 +1,48 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity , ScrollView} from 'react-native'
-import React from 'react'
-import { useFonts } from 'expo-font';
+import React, {useState} from 'react'
+
 import { Feather } from '@expo/vector-icons';
 import {CardHeaderCall, CardBodyCall, CardFooterCall} from "../components/primarycallcard";
 import {CardHeaderOptions, CardBodyOptions, CardFooterOptions} from "../components/calloptionscard";
 
 import styles from "../styes/callcardsstyles"
 
-
-const Call = () => {
-
-    const [loaded] = useFonts({
-        Prompt: require("../assets/fonts/Prompt-Medium.ttf"),
-        Nunito: require("../assets/fonts/Nunito-SemiBold.ttf")
-    });
-      
-    if (!loaded) {
-    return null;
-    }
-
-    return (
-      
-    <ScrollView nestedScrollEnabled = {true} >
-    <View style={{...styles.container, paddingTop:"15%"}}>
-        <View style={[styles.card, styles.shadowProp]}>
+const CallCard = ({receive, setReceive}) =>{
+    if(receive){
+        return(
             <View style={styles.box}>
-                
                 <CardHeaderOptions />
                 <CardBodyOptions /> 
                 <CardFooterOptions />
+            </View>
+        );
+    }
+    else{
+        return(
+            <View style={styles.box}>
+                <CardHeaderCall />
+                <CardBodyCall /> 
+                <CardFooterCall receive={receive} setReceive={setReceive} />
+            </View>
+        );
+    }
+}
 
+const Call = () => {
+    const [receive, setReceive] = useState(false);
+    return (
+        <ScrollView nestedScrollEnabled = {true} >
+        <View style={{...styles.container, paddingTop:"15%"}}>
+            <View style={[styles.card, styles.shadowProp]}>
+                
+                    
+                    <CallCard receive={receive} setReceive={setReceive}/>
+
+
+                
             </View>
         </View>
-    </View>
-    </ScrollView>
+        </ScrollView>
   )
 }
 

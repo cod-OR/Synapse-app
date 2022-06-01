@@ -152,23 +152,21 @@ const styles = StyleSheet.create({
     },
     blacktext:{
         fontFamily: "Nunito",
-        fontSize: 15,
-        fontWeight: "normal",
-        lineHeight: 23,
+        fontSize: 14,
+        lineHeight: 20,
         letterSpacing: 0,
         textAlign: "left",
     },
     whitetext:{
         fontFamily: "Nunito",
-        fontSize: 15,
-        fontWeight: "normal",
-        lineHeight: 23,
+        fontSize: 14,
+        lineHeight: 20,
         letterSpacing: 0,
         textAlign: "left",
-        color:"#FFFFFF"
+        color:"#FFFFFF",
+        fontWeight:"bold",
     },
     searchcompo:{
-        borderWidth:1,
         borderColor:"grey",
         height:200
     },
@@ -181,7 +179,7 @@ const styles = StyleSheet.create({
         justifyContent:"space-around",
         width:"100%",
         borderTopWidth:1,
-        borderColor:"grey",
+        borderColor:"#e6e6e6",
         height:40,
         alignItems:"center",
     },
@@ -191,7 +189,8 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
         paddingHorizontal:7,
-        backgroundColor:"#60529C"
+        backgroundColor:"#60529C",
+       
     },
     patientname:{
         fontFamily: "Nunito",
@@ -211,7 +210,37 @@ const styles = StyleSheet.create({
         borderBottomWidth:1, 
         minHeight:200, 
         flex:1,
-        borderColor:"grey"
+        borderColor:"#e6e6e6"
+    },
+    doctorinfo:{
+        backgroundColor:"#d9d9d9",
+        borderColor:"#8579b9",
+        borderRadius:5,
+        flexDirection:"row",
+        alignItems:"center",
+        justifyContent:"space-around",
+        marginHorizontal:10,
+        marginBottom:10,
+        padding:5
+    },
+    patientInfo:{
+        backgroundColor:"#c2bcdc",
+        
+    },
+    doctor_info_text_big:{
+        // padding:5,
+        fontFamily: "Nunito",
+        fontSize: 12,
+        lineHeight: 26,
+        letterSpacing: 0,
+        textAlign: "left",
+    },
+
+    doctor_info_text_small:{
+        // padding:5,
+        fontFamily: "Nunito",
+        fontSize: 10,
+        lineHeight: 26,
     }
 
 

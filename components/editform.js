@@ -1,6 +1,5 @@
 import { View, Text,StyleSheet, SafeAreaView, TextInput, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { useFonts } from 'expo-font';
 import addTestIdentifiers from '../utils/addTestIdentifiers';
 
 
@@ -10,14 +9,6 @@ const EditForm = () => {
     const [i3, onChangei3] = React.useState();
     const [i4, onChangei4] = React.useState();
 
-    const [loaded] = useFonts({
-        Nunito: require("../assets/fonts/Nunito-VariableFont_wght.ttf"),
-        Inter: require("../assets/fonts/Inter-VariableFont_slnt_wght.ttf")
-    });
-      
-    if (!loaded) {
-    return null;
-    }
 
 
   return (

@@ -33,10 +33,10 @@ export function CardBodyCall() {
 }
 
 
-export function CardFooterCall() {
+export function CardFooterCall({receive,setReceive}) {
     return (
         <View style={styles.cardfooter}>
-            <TouchableOpacity style={[styles.btn , styles.ll]}><Text style={styles.accepttext}>Accept</Text></TouchableOpacity>
+            <TouchableOpacity style={[styles.btn , styles.ll]} onPress={()=>{setReceive(true)}}><Text style={styles.accepttext}>Accept</Text></TouchableOpacity>
             <TouchableOpacity style={[styles.btn, styles.lr]}><Text style={styles.backuptext}>Request Backup</Text></TouchableOpacity>
         </View>
     );

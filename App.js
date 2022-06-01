@@ -6,11 +6,21 @@ import Sandbox from "./components/sandbox"
 import Home from "./pages/home"
 import Call from "./pages/call"
 import Edit from "./pages/edit"
-import Options from "./pages/options";
 import Login from "./pages/login";
+import { useFonts } from 'expo-font';
+
 
 
 export default function App() {
+    const [loaded] = useFonts({
+      Prompt: require("./assets/fonts/Prompt-Medium.ttf"),
+      Nunito: require("./assets/fonts/Nunito-VariableFont_wght.ttf"),
+      Inter: require("./assets/fonts/Inter-VariableFont_slnt_wght.ttf")
+  });
+    
+  if (!loaded) {
+      return null;
+  }
   return (
     <View style={styles.container}>
       <StatusBar hidden />
@@ -19,7 +29,6 @@ export default function App() {
       {/* <Home /> */}
       {/* <Edit /> */}
       <Call />
-      {/* <Options /> */}
       {/* <Sandbox /> */}
     </View>
   );

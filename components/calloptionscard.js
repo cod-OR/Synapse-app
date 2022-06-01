@@ -7,6 +7,7 @@ import { useState } from 'react'
 import ExistingPatientSearch from "./existingPatientSearch"
 import NonClinicalCall from "./nonClinicalCall"
 import NewPatient from "./newPatient"
+import { Ionicons, EvilIcons } from '@expo/vector-icons';
 
 export const CardHeaderOptions = () =>{
     return(
@@ -23,13 +24,13 @@ export const CardHeaderOptions = () =>{
 const Popup =({option}) => {
 
     
-    if(option==0){
+    if(option==""){
         return(
             <Text></Text>
         )
     }
 
-    if(option==1){
+    if(option=="new"){
         
         return(
             <View>
@@ -39,7 +40,7 @@ const Popup =({option}) => {
     }
 
 
-    if(option==2){
+    if(option=="existing"){
         return(
             <View style={styles.search_patient_box}>
             <ExistingPatientSearch /> 
@@ -47,7 +48,7 @@ const Popup =({option}) => {
         )
     }
 
-    if(option==3){
+    if(option=="nonclinical"){
         return(
             <View>
                 <NonClinicalCall />
@@ -60,10 +61,7 @@ const Popup =({option}) => {
 
 export const CardBodyOptions = () => {
 
-    const [option, setOption] = useState(0);
-    const [isClicked1, setClicked1] = useState(0);
-    const [isClicked2, setClicked2] = useState(0);
-    const [isClicked3, setClicked3] = useState(0);
+    const [option, setOption] = useState("");
 
 
     return (
@@ -71,44 +69,38 @@ export const CardBodyOptions = () => {
         
         <View style={{flexDirection:"row", justifyContent:"space-between", }}>
             <TouchableOpacity 
-                style={[styles.btn , (isClicked1)?styles.ll:styles.lr ]} 
+                style={[styles.btn , (option=="new")?styles.ll:styles.lr, {flexDirection:"row"} ]} 
                 
                 onPress={
                     ()=>{
-                        setOption(1); 
-                        setClicked1(1);
-                        setClicked2(0);
-                        setClicked3(0);
+                        setOption("new"); 
                     }
                 }>
-                <Text style={[(isClicked1)?styles.accepttext:styles.backuptext]} >New Patient?</Text>
+                <Ionicons name="add-circle-outline" size={24} color={(option=="new")?"#FFFF":"#35BDB2"} />
+                <Text style={[(option=="new")?styles.accepttext:styles.backuptext]} >New Patient?</Text>
             </TouchableOpacity>
-            <TouchableHighlight 
-                style={[styles.btn , (isClicked2)?styles.ll:styles.lr ]} 
+            <TouchableOpacity 
+                style={[styles.btn , (option=="existing")?styles.ll:styles.lr, {flexDirection:"row", width:"50%"} ]} 
                 onPress={
                     ()=>{
-                        setOption(2); 
-                        setClicked2(1);
-                        setClicked1(0);
-                        setClicked3(0);
+                        setOption("existing"); 
                     }
                 }>
-                    <Text style={[(isClicked2)?styles.accepttext:styles.backuptext]} >Existing Patient?</Text>
-            </TouchableHighlight>
+                <Ionicons name="search-outline" size={24} color={(option=="existing")?"#FFFF":"#35BDB2"} />
+                <Text style={[(option=="existing")?styles.accepttext:styles.backuptext]} >Existing Patient?</Text>
+            </TouchableOpacity>
         </View>
         <View style={{alignItems:"center", paddingTop:"5%"}}>
-            <TouchableHighlight 
-                style={[styles.btn , (isClicked3)?styles.ll:styles.lr ]}
+            <TouchableOpacity 
+                style={[styles.btn , (option=="nonclinical")?styles.ll:styles.lr, {flexDirection:"row", width:"50%"} ]}
                 onPress={
                     ()=>{
-                        setOption(3); 
-                        setClicked3(1);
-                        setClicked1(0);
-                        setClicked2(0);
+                        setOption("nonclinical"); 
                     }
                 }>
-                <Text style={[(isClicked3)?styles.accepttext:styles.backuptext]} >Non-clinical call?</Text>
-            </TouchableHighlight>
+                <EvilIcons name="question" size={24} color={(option=="nonclinical")?"#FFFF":"#35BDB2"} />
+                <Text style={[(option=="nonclinical")?styles.accepttext:styles.backuptext]} >Non-clinical call?</Text>
+            </TouchableOpacity>
         </View>
         <View style={styles.popup}>
 

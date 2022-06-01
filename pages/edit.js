@@ -1,27 +1,14 @@
-import { View, Text, ScrollView , StyleSheet, Image} from 'react-native'
+import { View, Text, ScrollView , StyleSheet, Image, KeyboardAvoidingView} from 'react-native'
 import React from 'react'
-import { useFonts } from 'expo-font';
 import EditForm from "../components/editform";
 import addTestIdentifiers from '../utils/addTestIdentifiers';
 
 const Edit = () => {
 
-    const [loaded] = useFonts({
-        Prompt: require("../assets/fonts/Prompt-Medium.ttf"),
-        Nunito: require("../assets/fonts/Nunito-VariableFont_wght.ttf"),
-        Inter: require("../assets/fonts/Inter-VariableFont_slnt_wght.ttf")
-    });
-      
-    if (!loaded) {
-    return null;
-    }
-    // 
-
   return (
       
       <ScrollView>
-                {/* <Text>kjbkjsbcjkb</Text> */}
-                <View style={[styles.card , styles.shadowProp]}>
+                <KeyboardAvoidingView style={[styles.card , styles.shadowProp]}  behavior="padding" >
 
                     <View style={styles.cardheader}>
                         
@@ -46,8 +33,7 @@ const Edit = () => {
                             <EditForm />
                     </View>
 
-                </View>
-            
+                </KeyboardAvoidingView>
                 </ScrollView>
   
   )
