@@ -9,10 +9,6 @@ import styles from "../styes/callcardsstyles"
 export function CardHeaderCall() {
     return(
     <View style={styles.cardheader} justifyContent="flex-end">
-        {/* <View>
-            <Text style={styles.headertext}>Confirm the details to</Text>
-            <Text style={styles.headertext}>continue</Text>
-        </View> */}
         <View style={[styles.btn , styles.ur ]}><Text style={styles.emer}>Emergent</Text></View>
     </View>
     );

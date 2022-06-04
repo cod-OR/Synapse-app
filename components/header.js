@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
         marginTop: "3%",
         width:"100%",
         height:"9%",
-
     },
     logo:{
       position: "absolute",

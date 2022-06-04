@@ -1,14 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View , KeyboardAvoidingView} from 'react-native';
+import { StyleSheet, Text, View , KeyboardAvoidingView, SafeAreaView} from 'react-native';
 import Header from "./components/header"
 import Sandbox from "./components/sandbox"
-
 import Home from "./pages/home"
 import Call from "./pages/call"
 import Edit from "./pages/edit"
 import Login from "./pages/login";
 import { useFonts } from 'expo-font';
-
 
 
 export default function App() {
@@ -22,14 +20,14 @@ export default function App() {
       return null;
   }
   return (
-    <View style={styles.container}>
+    <View style={styles.container}> 
       <StatusBar hidden />
       <KeyboardAvoidingView behavior="padding">
       <Header />
       {/* <Login /> */}
-      {/* <Home /> */}
+      <Home />
       {/* <Edit /> */}
-      <Call />
+      {/* <Call /> */}
       {/* <Sandbox /> */}
       </KeyboardAvoidingView>
     </View>

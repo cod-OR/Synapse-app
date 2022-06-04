@@ -2,15 +2,15 @@ import { View, Text, ScrollView , StyleSheet, Image, KeyboardAvoidingView} from 
 import React from 'react'
 import EditForm from "../components/editform";
 import addTestIdentifiers from '../utils/addTestIdentifiers';
+import styles from "../styes/callcardsstyles"
+
 
 const Edit = () => {
 
   return (
-      
       <ScrollView>
-                <KeyboardAvoidingView style={[styles.card , styles.shadowProp]}  behavior="padding" >
-
-                    <View style={styles.cardheader}>
+                <View style={[styles.card , styles.shadowProp, {marginTop:20}]}>
+                    <View style={[styles.cardheader, {justifyContent:"flex-start",flexDirection:"col", width:"100%"}]}>
                         
                             <Image 
                                 style={styles.icon}
@@ -33,7 +33,7 @@ const Edit = () => {
                             <EditForm />
                     </View>
 
-                </KeyboardAvoidingView>
+                    </View>
                 </ScrollView>
   
   )
@@ -42,78 +42,46 @@ const Edit = () => {
 export default Edit;
 
 
-const styles = StyleSheet.create({
-container:{
-    padding:"5%",
-},
+// const styles = StyleSheet.create({
+// container:{
+//     padding:"5%",
+// },
 
-card: {
-    backgroundColor: 'white',
-    borderRadius: 8,
-    height:"100%",
-    wight:"100%",
-    padding:0
-},
-shadowProp: {
-    shadowColor: '#171717',
-    shadowOffset: {width: 0, height:1},
-    shadowOpacity: 0.2,
-    shadowRadius: 10,
-},
-cardheader:{
-    justifyContent:"flex-start",
-    flexDirection:"col",
-    paddingTop:5,
-    paddingBottom: 35,
-    paddingHorizontal:15
-},
-icon:{
-    height: 100,
-    width: 102,
-    borderRadius: 0,
-},
-cardbody:{
-    justifyContent:"center",
-    flex:5,
-    borderTopWidth:1,
-    borderColor: "grey",
-    marginLeft:10,
-    marginRight:10,
-    padding:10,
-    marginTop:10
-},
-cardfooter:{
-    flex:1,
-    flexDirection:"row",
-    justifyContent:"space-around"
-},
+// card: {
+//     backgroundColor: 'white',
+//     borderRadius: 8,
+//     height:"100%",
+//     wight:"100%",
+//     padding:0,
+// },
+// shadowProp: {
+//     shadowColor: '#171717',
+//     shadowOffset: {width: 0, height:1},
+//     shadowOpacity: 0.2,
+//     shadowRadius: 10,
+// },
+// cardheader:{
+    
+//     paddingTop:5,
+//     paddingBottom: 35,
+//     paddingHorizontal:15
+// },
 
-headingtext:{
-    fontFamily: "Prompt",
-    fontSize: 20,
-    fontWeight: "500",
-    lineHeight: 30,
-    letterSpacing: 0,
-    textAlign: "left",
-},
-infotext:{
-    fontFamily: "Nunito",
-    fontSize: 14,
-    fontWeight: "600",
-    lineHeight: 21,
-    letterSpacing: 0,
-    textAlign: "left",
-    color:"#8D99A7"
-    //styleName: Text / Buttons;
-},
-boldinfotext:{
-    fontFamily: "Inter",
-    fontSize: 16,
-    fontWeight: "600",
-    lineHeight: 24,
-    letterSpacing: 0,
-    textAlign: "left",
-    color:"#000"
-}
+// cardbody:{
+//     justifyContent:"center",
+//     flex:5,
+//     borderTopWidth:1,
+//     borderColor: "grey",
+//     marginLeft:10,
+//     marginRight:10,
+//     padding:10,
+//     marginTop:10
+// },
+// cardfooter:{
+//     flex:1,
+//     flexDirection:"row",
+//     justifyContent:"space-around"
+// },
 
-});
+
+// });

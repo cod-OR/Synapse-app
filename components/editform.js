@@ -4,12 +4,10 @@ import addTestIdentifiers from '../utils/addTestIdentifiers';
 
 
 const EditForm = () => {
-    const [i1, onChangei1] = React.useState();
-    const [i2, onChangei2] = React.useState();
-    const [i3, onChangei3] = React.useState();
-    const [i4, onChangei4] = React.useState();
-
-
+    const [fname, setFname] = React.useState();
+    const [lname, setLname] = React.useState();
+    const [mdn, setMdn] = React.useState();
+    const [notes, setNotes] = React.useState();
 
   return (
       <View style={styles.form}>
@@ -18,8 +16,7 @@ const EditForm = () => {
       <Text style={styles.label}> FIRST NAME </Text>
         <TextInput
           style={styles.input}
-          onChangeText={onChangei1}
-          value={i1}
+          value={fname}
           {...addTestIdentifiers('text_input_first')} 
         />
       </View>
@@ -27,24 +24,21 @@ const EditForm = () => {
       <Text style={styles.label}> LAST NAME </Text>
         <TextInput
           style={styles.input}
-          onChangeText={onChangei2}
-          value={i2}
+          value={lname}
         />
       </View>
       <View style={styles.ipbox}>
       <Text style={styles.label}> MDN </Text>
         <TextInput
           style={styles.input}
-          onChangeText={onChangei3}
-          value={i3}
+          value={mdn}
         />
       </View>
       <View style={styles.ipbox}>
       <Text style={styles.label}> NOTES (Internal Only) </Text>
         <TextInput
           style={[styles.input, styles.notesip]}
-          onChangeText={onChangei4}
-          value={i4}
+          value={notes}
           multiline = {true}
           numberOfLines = {10}
         />

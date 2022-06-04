@@ -1,7 +1,5 @@
 import { StyleSheet } from 'react-native'
 
-
-
 const styles = StyleSheet.create({
     card: {
         backgroundColor: 'white',
@@ -9,7 +7,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems:"center",
         wight:"100%",
-        padding:"4%"
+        padding:"4%",
     },
     accepttext:{
         color:"#FFFFFF",
@@ -20,7 +18,6 @@ const styles = StyleSheet.create({
     },
     cardheader:{
         justifyContent:"space-between",
-
         flexDirection:"row",
     },
     cardbody:{
@@ -32,6 +29,11 @@ const styles = StyleSheet.create({
         marginVertical:10,
         paddingVertical:"5%",
         paddingHorizontal:0
+
+
+
+
+        
     },
     cardfooter:{
         flexDirection:"row",
@@ -172,10 +174,7 @@ const styles = StyleSheet.create({
         borderColor:"grey",
         height:200
     },
-    searchbar:{
-        width:"100%",  
-
-    },
+    
     searchresultcompo:{
         flexDirection:"row",
         justifyContent:"space-around",
@@ -206,7 +205,6 @@ const styles = StyleSheet.create({
         fontWeight: "500",
         lineHeight:15,
         color:"#FFFF"
-        
     },
     search_patient_box:{
         minHeight:200, 
@@ -245,7 +243,64 @@ const styles = StyleSheet.create({
         fontSize: 10,
         lineHeight: 26,
         color:"#60529C",
-    }
+    },
+
+      searchBar__unclicked: {
+        
+        flexDirection: "row",
+        width: "100%",
+        justifyContent:"space-around"
+      },
+      searchbar:{
+        width:"100%", 
+        flexDirection:"row",
+        height:40,
+        alignItems:"center",
+        borderRadius:5,
+        borderTopWidth:1,
+        borderColor:"#e6e6e6",
+        flex:1,
+        
+    },
+      input: {
+        flex:1,
+        justifyContent:"center",
+        width:"100%",
+        height:"100%",
+      },
+      headingtext:{
+        fontFamily: "Prompt",
+        fontSize: 20,
+        fontWeight: "500",
+        lineHeight: 30,
+        letterSpacing: 0,
+        textAlign: "left",
+    },
+    infotext:{
+        fontFamily: "Nunito",
+        fontSize: 14,
+        fontWeight: "600",
+        lineHeight: 21,
+        letterSpacing: 0,
+        textAlign: "left",
+        color:"#8D99A7"
+        //styleName: Text / Buttons;
+    },
+    boldinfotext:{
+        fontFamily: "Inter",
+        fontSize: 16,
+        fontWeight: "600",
+        lineHeight: 24,
+        letterSpacing: 0,
+        textAlign: "left",
+        color:"#000"
+    },
+    icon:{
+        height: 100,
+        width: 102,
+        borderRadius: 0,
+    },
+    
 
 
 
